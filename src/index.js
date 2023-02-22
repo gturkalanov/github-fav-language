@@ -1,7 +1,7 @@
 const readline = require('readline');
 const { getReposForUser } = require('./github-api');
 const { findFavLanguage } = require('./fav-lang');
-const { GITHUB_API_URL} = require('../config/config');
+const { GITHUB_API_BASE_URL} = require('../config/config');
 
 
 const rl = readline.createInterface({
@@ -12,7 +12,7 @@ const rl = readline.createInterface({
 const main = async () => {
     rl.question('Enter a Github username: ', async (githubUsername) => {
         try {
-            const repos = await getReposForUser(GITHUB_API_URL, githubUsername);
+            const repos = await getReposForUser(GITHUB_API_BASE_URL, githubUsername);
             const favLanguage = findFavLanguage(repos);
             console.log(`The favorite language of ${githubUsername} is ${favLanguage}`);
             rl.close();
