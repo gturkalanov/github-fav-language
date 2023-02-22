@@ -7,7 +7,7 @@ const findFavLanguage = (repos) => {
             tempLanguageArray[language] = (tempLanguageArray[language] || 0) + 1;
         }
     }
-    console.log(tempLanguageArray)
+
     let maxCount = 0;
     let favoriteLanguageName = null;
     for (let language in tempLanguageArray) {
