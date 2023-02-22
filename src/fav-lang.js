@@ -19,7 +19,7 @@ const findFavLanguage = (repos) => {
 
     return favoriteLanguageName;
 };
-  
+
 module.exports = {
     findFavLanguage
 };

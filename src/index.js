@@ -1,7 +1,7 @@
 const readline = require('readline');
 const { getReposForUser } = require('./github-api');
 const { findFavLanguage } = require('./fav-lang');
-const { GITHUB_API_BASE_URL} = require('../config/config');
+const { GITHUB_API_BASE_URL } = require('../config/config');
 
 
 const rl = readline.createInterface({
