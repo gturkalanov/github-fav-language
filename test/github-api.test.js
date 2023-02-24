@@ -1,5 +1,5 @@
 const axios = require('axios');
-const {getReposForUser} = require('../src/github-api');
+const { getReposForUser } = require('../src/github-api');
 
 jest.mock('axios');
 

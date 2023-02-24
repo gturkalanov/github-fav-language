@@ -13,8 +13,8 @@ const main = async () => {
     rl.question('Enter a Github username: ', async (githubUsername) => {
         try {
             const repos = await getReposForUser(GITHUB_API_BASE_URL, githubUsername);
-            const favLanguage = findFavLanguage(repos);          
-            if(favLanguage){
+            const favLanguage = findFavLanguage(repos);
+            if (favLanguage) {
                 console.log(`The favorite language of ${githubUsername} is ${favLanguage}`);
             } else {
                 console.log(`The repositories of ${githubUsername} have only "null" as their language`);
